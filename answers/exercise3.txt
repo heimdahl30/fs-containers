@@ -1,0 +1,8 @@
+docker start -i affectionate_spence
+apt-get update
+apt-get -y nano
+nano usr/src/app/index.js
+console.log('Hello World')
+^O
+Enter
+exit

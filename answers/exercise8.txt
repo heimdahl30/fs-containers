@@ -1,0 +1,12 @@
+docker compose -f docker-compose.dev.yml up
+docker container ls
+docker exec -it <container-id> sh
+mongosh -u root -p example
+show dbs
+use the_database
+show collections
+db.todos.find({})
+db.todos.insertOne({text:Increase the tools in my tool belt,done:false},{writeConcern:{w:majority}})
+db.todos.find({}) //check Mongo CLI for data
+MONGO_URL=mongodb://<username>:<password>@localhost:3456/the_database npm run dev
+Go to http://localhost:3000/todos // Added data present

@@ -1,4 +1,5 @@
 const express = require('express');
+const redis = require('../redis')
 const router = express.Router();
 
 const configs = require('../util/config')
@@ -10,7 +11,7 @@ router.get('/', async (req, res) => {
   visits++
 
   res.send({
-    ...configs,
+    message: "Welcome to the Todo API",
     visits
   });
 });

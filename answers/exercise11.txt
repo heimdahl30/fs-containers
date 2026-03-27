@@ -1,0 +1,13 @@
+docker exec -it <container-id> redis-cli
+PING // PONG response
+KEYS *
+GET added_todos
+SET added_todos 9001
+Refreshed http://localhost:3000/todos/statistics // {"added_todos": 9001}
+New todo added using POSTMAN
+Refreshed http://localhost:3000/todos/statistics // {"added_todos": 9002}
+DEL added_todos
+Refreshed http://localhost:3000/todos/statistics // {"added_todos": 0}
+New todo added using POSTMAN
+Refreshed http://localhost:3000/todos/statistics // {"added_todos": 1}
+exit
